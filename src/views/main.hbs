@@ -1,0 +1,26 @@
+<h1 class="text-center">My cart. Грызи гранит науки!</h1>
+<hr/>
+<section data-cart class = "d-flex flex-column align-items-center">
+    {{#each cart}}
+                <div data-id= "{{this.id}}" class="card my-2" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{this.title}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Price:{{this.price}}</h6>
+                <p class="card-text">Count:<span data-count>{{this.count}}</span></p>
+                <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                    <button data-action="decrease" type = "button" class="btn btn-danger">-</button>
+
+                    <button data-action="increase" type = "button" class="btn btn-success">+</button>
+                </div>
+
+            </div>
+        </div>
+
+    {{/each}}
+</section>
+
+<hr/>
+
+<section class="d-flex flex-column align-items-center">
+    <button type="button" class="btn btn-danger">Total:<span data-total>{{total}}</span></button>
+</section>
