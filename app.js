@@ -1,11 +1,11 @@
 const express = require('express')
 const path = require('path')
 const {db} = require('./DB')
-// const fs = require('fs')
-const PORT = 3002
+ const fs = require('fs')
+const PORT = 3003
 const server = express()
 
-// process.env.PWD = path.dirname(fs.realpathSync(__filename))
+ process.env.PWD = path.dirname(fs.realpathSync(__filename))
 
 server.set('view engine', 'hbs')
 server.set('views', path.join(__dirname, 'src', 'views'))
@@ -15,7 +15,7 @@ server.use(express.json())
 server.use((req, res, next) => {
     console.log(req.body)
     // db.cart[0] += 1
-        console.log(db.cart[0].count++)
+        
         next()
 },
    )
@@ -54,4 +54,5 @@ server.use(express.static('.'));
 server.listen(PORT, () => {
     console.log(`Server has been started on port: ${PORT}`)
 })
-console.log("http://localhost:3002/")
+console.log("http://localhost:3003/")
+nnnnnnnnnnnnnnnnnnnnnnn
