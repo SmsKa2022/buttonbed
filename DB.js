@@ -19,7 +19,7 @@ const db = {
             title: 'mouse',
             price: 10,
             count: 1
-        },
+        }
     ]
 }
 
