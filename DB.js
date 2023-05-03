@@ -13,7 +13,13 @@ const db = {
             title: `Orange`,
             price: 5,
             count: 1
-        }
+        },
+        {
+            id: uuidv4(),
+            title: 'mouse',
+            price: 10,
+            count: 1
+        },
     ]
 }
 
